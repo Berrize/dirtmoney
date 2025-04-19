@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namora comigo?</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .wallpaper {
+      background-image: url("Sem título (2).png");
+      background-size: cover;
+      background-position: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.18;
+      z-index: -1;
+    }
+
+    #conteudo {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 40px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .imagem-topo {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    #btn {
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wallpaper"></div>
+
+  <div id="conteudo">
+    <!-- Imagem acima do texto -->
+    <img src="e3b85e21-4ec3-4fe5-bf49-efe95072434d.jpg" alt="Foto" class="imagem-topo">
+    
+    <h2>Aceita namorar comigo? my 00</h2>
+    <button onclick="sim()">SIM</button>
+    <button id="btn" onmouseover="desvia(this)">NÃO</button>
+  </div>
+
+  <script>
+    function sim() {
+      alert("Oficialmente my namorada e 00!    Ass: brz");
+      location.href = "https://www.youtube.com/watch?v=3JiMr-HgHJ8";
+    }
+
+    function desvia(t) {
+      t.style.position = 'absolute';
+      t.style.bottom = geraPosicao(10, 90);
+      t.style.right = geraPosicao(10, 90);
+      console.log("opa, desviei...");
+    }
+
+    function geraPosicao(min, max) {
+      return (Math.random() * (max - min) + min) + "%";
+    }
+  </script>
+</body>
+</html>
